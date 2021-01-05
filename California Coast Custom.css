@@ -1,0 +1,144 @@
+/* 设置行宽 */
+body.is-frameless, body.mod-macos, body.theme-light, body.california-coast-theme {
+    --line-width: 50rem !important;
+}
+
+/* 设置编辑模式字体大小 */
+.CodeMirror pre.CodeMirror-line,
+.CodeMirror pre.CodeMirror-line-like {
+    font-size: 16px;
+}
+
+/* 设置预览模式字体大小 */
+html,
+body,
+input,
+button,
+.cm-s-obsidian .cm-formatting-hashtag,
+.cm-s-obsidian {
+    font-size: 16px;
+    line-height: 2;
+}
+
+/* 设置无序列表前面的点点的颜色 */
+ul > li:not(.task-list-item)::before {
+    color: var(--text-normal);
+}
+
+/* 设置有序列表前面的点点的颜色 */
+ol > li::before {
+    color: var(--text-normal);
+}
+
+/* 设置右侧面板上下分割线颜色，并取消过渡动画 */
+.is-translucent .workspace-leaf-resize-handle {
+    background-color: var(--shade-plus-darker-hsl);
+    transition: none;
+}
+
+/* 设置右侧面板上下分割线 hover 时不要隐藏 */
+.is-translucent .workspace-leaf-resize-handle:hover {
+    background-color: var(--shade-plus-darker-hsl);
+}
+
+/* 侧边栏文件（夹）active & hover 添加背景颜色 */
+.nav-file-title:hover,
+.nav-folder-title:hover,
+.nav-file-title.is-active {
+    /* background-color: rgba(255, 192, 195, 0.445) !important; */
+    background-color: #cecfcfad !important;
+}
+
+.nav-folder-title,
+.nav-file-title {
+    padding-left: 4px;
+    margin-left: 5px;
+}
+
+/* 设置侧边栏 vault 标题样式 */
+.nav-folder.mod-root > .nav-folder-title {
+    margin-left: 0;
+    padding-left: 10px;
+    padding-top: 10px;
+
+}
+
+.nav-files-container {
+    padding-top: 0;
+}
+
+.nav-folder.mod-root > .nav-folder-title .nav-folder-title-content {
+    margin-bottom: 4px;
+    padding-top: 0;
+    height: 22px;
+    color: var(--text-normal);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* 设置左侧边栏文件浏览器缩进样式 */
+/* .nav-folder.mod-root > .nav-folder-children .nav-folder,
+.nav-folder.mod-root > .nav-folder-children .nav-file {
+    padding-left: 0;
+    margin-left: 17px;
+    border-left: 1px solid var(--text-faint);
+} */
+
+/* .nav-folder.mod-root > .nav-folder-children > .nav-folder,
+.nav-folder.mod-root > .nav-folder-children > .nav-file {
+    margin-left: 0;
+    padding: 0 0 0 9px;
+    border-left: none;
+} */
+
+/* 设置文件浏览器文件夹展开的竖线 */
+.nav-folder.mod-root .nav-folder-children {
+    border-left: 1px solid var(--text-faint);
+}
+
+/* 设置文件浏览器最外层文件夹展开不要竖线 */
+.nav-folder.mod-root > .nav-folder-children {
+    border-left: none;
+}
+
+.nav-folder.mod-root > .nav-folder-children > .nav-folder {
+    padding-left: 16px;
+}
+
+.nav-folder-title-content {
+    padding-left: 8px;
+}
+
+.nav-folder.mod-root .nav-folder-children .nav-file {
+    padding: 0 10px 0 0;
+}
+
+.nav-folder-title-content {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* 设置编辑 / 预览的顶部 padding */
+html .CodeMirror-lines {
+    padding-top: 35px;
+}
+
+.markdown-preview-sizer {
+    padding-top: 20px;
+}
+
+/* 修改展开/收缩符号样式 */
+.collapse-icon svg, .menu-item-icon svg {
+    width: 8px;
+    height: 8px;
+    color: var(--shade-80);
+}
+
+.is-collapsed .collapse-icon svg {
+    transform: rotate(-90deg);
+}
+
+.tree-item-self {
+    padding-left: 0;
+}

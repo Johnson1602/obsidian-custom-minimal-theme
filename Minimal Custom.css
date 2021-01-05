@@ -1,0 +1,176 @@
+/* 设置行距 */
+html,
+body,
+input,
+button,
+.cm-s-obsidian .cm-formatting-hashtag,
+.cm-s-obsidian {
+    line-height: 1.9;
+}
+
+/* 侧边栏字体颜色 */
+.nav-file-title,
+.nav-folder-title,
+.nav-folder-collapse-indicator,
+.tree-item-self,
+.tree-item-self .collapse-icon {
+    color: var(--text-normal);
+}
+
+/* 搜索结果显示个数 */
+.tree-item-flair:not(.tag-pane-tag-count) { /* Search counts */
+    display: block;
+}
+
+/* 各种图标的样式 */
+.view-header-icon,
+.workspace-tab-header,
+.nav-action-button,
+.side-dock-ribbon-tab,
+.side-dock-ribbon-action,
+.view-action {
+    background:transparent;
+    border-radius: 5px !important;
+    color:var(--text-normal);
+    opacity:1;
+    transition:opacity 0.1s ease-in-out;
+    cursor:var(--cursor);
+}
+
+/* 设置图标上下居中，不重要 */
+.workspace-tab-header-container {
+    padding: 2px 0;
+}
+
+.workspace-tab-container-inner {
+    padding-bottom: 2px;
+    margin-bottom: -2px;
+}
+
+/* 设置图标的 hover / active 样式 */
+/* tab header 为直角矩形 */
+.workspace-tab-header {
+    /* background-color: #e7e8e8 !important; */
+    border-radius: 0 !important;
+    padding-right: 1px;
+}
+
+/* 第一个元素左侧遍有圆角 */
+.workspace-tab-header:first-child {
+    border-radius: 5px 0 0 5px !important;
+}
+
+/* 最后一个元素右侧边有圆角 */
+.workspace-tab-header:last-child {
+    border-radius: 0 5px 5px 0 !important;
+    padding-right: 0;
+}
+
+/* 如果只有一个元素，那么所有都是圆角 */
+.workspace-tab-header:first-child:nth-last-child(1) {
+    border-radius: 5px !important;
+}
+
+/* tab header inner 为圆角矩形 */
+.workspace-tab-header-inner {
+    padding: 3px 7px;
+    border-radius: 5px !important;
+    transition: none !important;
+}
+
+/* 最外层 hover 的时候，里层除了 active 的都变浅色，active 的变深色 */
+.workspace-tab-header-container:hover .workspace-tab-header {
+    background-color: #e7e8e8 !important;
+}
+
+/* active 的变深色 */
+.workspace-tab-header-container:hover .workspace-tab-header.is-active .workspace-tab-header-inner {
+    background:#c0c1c1 !important;
+}
+
+.workspace-tab-header-inner:active {
+    background:#c0c1c1 !important;
+}
+
+/* 选中之后的颜色 */
+.workspace-tab-header.is-active .workspace-tab-header-inner {
+    background:#e7e8e8 !important;
+    color:var(--text-normal);
+}
+
+.view-action:hover,
+.view-header-icon:hover,
+.nav-action-button:hover,
+.workspace-tab-header:hover,
+.side-dock-ribbon-tab:hover,
+.side-dock-ribbon-action:hover {
+    background:transparent;
+    color:var(--text-normal);
+}
+
+.titlebar-text {
+    display:block;
+    color:var(--text-normal);
+}
+
+.titlebar-button-container.mod-left {
+    display: none;
+}
+
+.titlebar:hover .titlebar-button-container.mod-left {
+    display: block;
+}
+
+.tree-item-self:hover .tree-item-flair {
+    color:var(--text-accent);
+}
+
+.markdown-preview-view blockquote {
+    border-radius:0;
+    border:solid var(--quote-opening-modifier);
+    border-width:0px 0px 0px 3px;
+    background-color:#fafafa;
+    color:var(--text-muted);
+    padding:7px 0 7px calc(var(--nested-padding) / 2);
+    margin-inline-start:var(--nested-padding);
+}
+
+/* Fill color for nodes */
+.graph-view.color-fill {
+    color:var(--text-normal);
+}
+
+/* Line color */
+.graph-view.color-line {
+    /* color:var(--background-modifier-border); */
+    color: var(--text-faint);
+}
+
+.graph-controls {
+    background:var(--background-primary);
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+    left:10px;
+    padding:5px 20px 10px 5px;
+    border-radius:5px;
+}
+
+.view-header-title,
+.file-embed-title,
+.markdown-embed-title {
+  letter-spacing:0em;
+  text-align:left;
+  font-size:21px;
+  font-weight:var(--bold-weight);
+  height: 39px !;
+  line-height: 43px;
+}
+
+.view-header {
+    border-bottom: 1px solid var(--background-modifier-border) !important;
+    /* box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.05); */
+}
+
+/* .nav-file-title:hover {
+    background-color: var(--background-tertiary) !important;
+} */
+
