@@ -178,10 +178,8 @@ button,
     background-color: var(--background-tertiary) !important;
 } */
 
-.markdown-preview-view code {
-    color: var(--code-color);
-}
-
+.markdown-preview-view code,
+.cm-s-obsidian pre.HyperMD-codeblock,
 .cm-s-obsidian span.cm-inline-code {
     color: var(--code-color);
 }
@@ -224,7 +222,7 @@ a {
     --link-color: #1069c9;
     --icon-background-light: #e7e8e8;
     --icon-background-dark: #c0c1c1;
-    --code-color: #c7254e;
+    --code-color: #d73a49;
     --blockquote-background: #fafafa;
 }
 
