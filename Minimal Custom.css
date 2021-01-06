@@ -80,21 +80,21 @@ button,
 
 /* 最外层 hover 的时候，里层除了 active 的都变浅色，active 的变深色 */
 .workspace-tab-header-container:hover .workspace-tab-header {
-    background-color: #e7e8e8 !important;
+    background-color: var(--icon-background-light) !important;
 }
 
 /* active 的变深色 */
 .workspace-tab-header-container:hover .workspace-tab-header.is-active .workspace-tab-header-inner {
-    background:#c0c1c1 !important;
+    background:var(--icon-background-dark) !important;
 }
 
 .workspace-tab-header-inner:active {
-    background:#c0c1c1 !important;
+    background:var(--icon-background-dark) !important;
 }
 
 /* 选中之后的颜色 */
 .workspace-tab-header.is-active .workspace-tab-header-inner {
-    background:#e7e8e8 !important;
+    background:var(--icon-background-light) !important;
     color:var(--text-normal);
 }
 
@@ -126,12 +126,11 @@ button,
 }
 
 .markdown-preview-view blockquote {
-    border-radius:0;
     border:solid var(--quote-opening-modifier);
     border-width:0px 0px 0px 3px;
-    background-color:#fafafa;
+    background-color:var(--blockquote-background);
     color:var(--text-muted);
-    padding:7px 0 7px calc(var(--nested-padding) / 2);
+    padding:7px calc(var(--nested-padding) / 2);
     margin-inline-start:var(--nested-padding);
 }
 
@@ -147,11 +146,15 @@ button,
 }
 
 .graph-controls {
-    background:var(--background-primary);
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+    background:var(--background-secondary);
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15);
     left:10px;
     padding:5px 20px 10px 5px;
     border-radius:5px;
+}
+
+.mod-root .workspace-leaf-content[data-type='localgraph'] .graph-controls, .mod-root .workspace-leaf-content[data-type='graph'] .graph-controls {
+    top: 50px;
 }
 
 .view-header-title,
@@ -165,12 +168,73 @@ button,
   line-height: 43px;
 }
 
+/* 设置笔记标题的边框及阴影 */
 .view-header {
     border-bottom: 1px solid var(--background-modifier-border) !important;
-    /* box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.05); */
+    /* box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.15); */
 }
 
 /* .nav-file-title:hover {
     background-color: var(--background-tertiary) !important;
 } */
+
+.markdown-preview-view code {
+    color: var(--code-color);
+}
+
+.cm-s-obsidian span.cm-inline-code {
+    color: var(--code-color);
+}
+
+.cm-s-obsidian span.cm-hmd-internal-link,
+.cm-s-obsidian span.cm-url,
+a {
+    color: var(--link-color);
+}
+
+.external-link,
+.minimal-theme.links-ext-on .external-link,
+.markdown-preview-view .internal-link,
+.minimal-theme.links-int-on .markdown-preview-view .internal-link,
+.cm-s-obsidian span.cm-url {
+    text-decoration: none;
+}
+
+.external-link:hover,
+.minimal-theme.links-ext-on .external-link:hover,
+.markdown-preview-view .internal-link:hover,
+.minimal-theme.links-int-on .markdown-preview-view .internal-link:hover,
+.cm-s-obsidian span.cm-url:hover {
+    text-decoration: underline;
+    color: var(--link-color);
+}
+
+/* --------------- */
+/* Dark mode images  */
+
+.theme-dark .markdown-preview-view img {
+    opacity:1;
+    transition:none;
+}
+.theme-dark .markdown-preview-view img:hover {
+    transition:none;
+}
+
+.theme-light {
+    --link-color: #1069c9;
+    --icon-background-light: #e7e8e8;
+    --icon-background-dark: #c0c1c1;
+    --code-color: #c7254e;
+    --blockquote-background: #fafafa;
+}
+
+.theme-dark {
+    --background-primary: #1e1e1e;
+    --background-secondary: #252526;
+    --link-color: #2997ff;
+    --icon-background-light: #323435;
+    --icon-background-dark: #656768;
+    --code-color: #f0976b;
+    --blockquote-background: #2a2a2a;
+}
 
