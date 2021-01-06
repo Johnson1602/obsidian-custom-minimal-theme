@@ -236,3 +236,8 @@ a {
     --blockquote-background: #2a2a2a;
 }
 
+.is-flashing {
+    box-shadow: none;
+    background-color: transparent;
+}
+
