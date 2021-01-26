@@ -1,3 +1,34 @@
+.markdown-preview-view h1 {
+    font-size: 1.5em;
+    letter-spacing: 0em;
+}
+
+.markdown-preview-view h2 {
+    margin-top: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--background-modifier-border);
+    font-size: 1.4em;
+    letter-spacing: 0em;
+}
+
+.markdown-preview-view h3 {
+    margin-top: 24px;
+    font-size: 1.2em !important;
+}
+
+.markdown-preview-view h3,
+.markdown-preview-view h4,
+.markdown-preview-view h5,
+.markdown-preview-view h6 {
+    font-size: 1em;
+    letter-spacing: 0em;
+}
+
+.cm-formatting-header-4,
+.cm-formatting-header-5 {
+    color: var(--text-faint);
+}
+
 /* 设置行距 */
 html,
 body,
@@ -5,7 +36,7 @@ input,
 button,
 .cm-s-obsidian .cm-formatting-hashtag,
 .cm-s-obsidian {
-    line-height: 1.9;
+    line-height: 1.8;
 }
 
 /* 侧边栏字体颜色 */
@@ -15,6 +46,12 @@ button,
 .tree-item-self,
 .tree-item-self .collapse-icon {
     color: var(--text-normal);
+}
+
+.nav-file-title.is-active,
+.nav-file-title.is-active:hover {
+    background-color: var(--item-active-backgroud) !important;
+    color: #ffffff !important;
 }
 
 /* 搜索结果显示个数 */
@@ -129,7 +166,8 @@ button,
     border:solid var(--quote-opening-modifier);
     border-width:0px 0px 0px 3px;
     background-color:var(--blockquote-background);
-    color:var(--text-muted);
+    color:var(--text-normal);
+    opacity: 0.9;
     padding:7px calc(var(--nested-padding) / 2);
     margin-inline-start:var(--nested-padding);
 }
@@ -190,13 +228,13 @@ a {
     color: var(--link-color);
 }
 
-.external-link,
+/* .external-link,
 .minimal-theme.links-ext-on .external-link,
 .markdown-preview-view .internal-link,
 .minimal-theme.links-int-on .markdown-preview-view .internal-link,
 .cm-s-obsidian span.cm-url {
     text-decoration: none;
-}
+} */
 
 .external-link:hover,
 .minimal-theme.links-ext-on .external-link:hover,
@@ -224,6 +262,7 @@ a {
     --icon-background-dark: #c0c1c1;
     --code-color: #d73a49;
     --blockquote-background: #fafafa;
+    --item-active-backgroud: #0063e1;
 }
 
 .theme-dark {
@@ -234,10 +273,15 @@ a {
     --icon-background-dark: #656768;
     --code-color: #f0976b;
     --blockquote-background: #2a2a2a;
+    --item-active-backgroud: #0058d0;
 }
 
 .is-flashing {
     box-shadow: none;
-    background-color: transparent;
+    /* background-color: transparent; */
+}
+
+div {
+    transition: background-color 0.3s ease;
 }
 
