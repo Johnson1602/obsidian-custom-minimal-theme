@@ -195,6 +195,10 @@ button,
     top: 50px;
 }
 
+.view-header {
+    height: 36px;
+}
+
 .view-header-title,
 .file-embed-title,
 .markdown-embed-title {
@@ -202,8 +206,8 @@ button,
   text-align:left;
   font-size:21px;
   font-weight:var(--bold-weight);
-  height: 39px !;
-  line-height: 43px;
+  height: 35px;
+  line-height: 35px;
 }
 
 /* 设置笔记标题的边框及阴影 */
