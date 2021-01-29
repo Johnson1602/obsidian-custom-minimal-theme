@@ -224,6 +224,7 @@ button,
 .cm-s-obsidian pre.HyperMD-codeblock,
 .cm-s-obsidian span.cm-inline-code {
     color: var(--code-color);
+    font-size: 0.85em !important;
 }
 
 .cm-s-obsidian span.cm-hmd-internal-link,
