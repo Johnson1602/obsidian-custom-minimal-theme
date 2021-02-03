@@ -250,6 +250,17 @@ a {
     color: var(--link-color);
 }
 
+/* 脚注不显示顶部分割线 */
+.footnotes > hr {
+    display: none;
+}
+
+.markdown-preview-view img {
+    display: block;
+    margin: auto;
+}
+
+
 /* --------------- */
 /* Dark mode images  */
 
