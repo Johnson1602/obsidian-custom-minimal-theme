@@ -301,3 +301,108 @@ div {
     transition: background-color 0.3s ease;
 }
 
+/* Calendar Plugin */
+#calendar-container {
+    --color-background-day-active:var(--text-accent);
+    --color-background-day-hover:var(--background-tertiary);
+    --color-dot:var(--text-muted);
+    --color-text-title:var(--text-normal);
+    --color-text-heading:var(--text-muted);
+    --color-text-day:var(--text-normal);
+    --color-text-today:var(--text-normal);
+    --color-arrow:var(--text-muted);
+    --color-background-day-empty:transparent;
+    /* --color-background-weekend: var(--icon-background-light); */
+}
+
+#calendar-container .nav.svelte-1elemso {
+    margin-bottom: 0.3em;
+}
+
+#calendar-container {
+    padding: 7px;
+}
+
+#calendar-container .day {
+    transition: none;
+}
+
+#calendar-container .day:active {
+    color: var(--text-normal);
+}
+
+#calendar-container .today:active {
+    color: var(--text-accent);
+}
+
+#calendar-container .dot {
+  margin:0;
+}
+
+#calendar-container .title {
+  padding-left: 5px;
+  font-size:var(--font-normal);
+}
+
+#calendar-container .month {
+    margin-right: 3px;
+    font-weight:700;
+}
+
+#calendar-container .today {
+  color:var(--text-accent);
+  font-weight:600;
+}
+
+#calendar-container .today .dot {
+  fill:var(--text-accent);
+}
+
+#calendar-container .active .dot {
+    stroke: #ffffff;
+    fill: #ffffff;
+}
+
+#calendar-container .active .task {
+    stroke: #ffffff;
+}
+
+#calendar-container .active {
+    color: #ffffff;
+    background-color: var(--text-normal);
+    transition: none;
+}
+
+#calendar-container .active.today,
+#calendar-container .week-num.active {
+  background-color:var(--color-background-day-active);
+}
+
+#calendar-container .day:hover,
+#calendar-container .week-num:hover {
+  background: none;
+}
+
+#calendar-container .day:hover.active {
+    background-color: var(--text-normal);
+}
+
+#calendar-container .day:hover.active.today,
+#calendar-container .week-num:hover.active {
+    background-color:var(--color-background-day-active);
+}
+
+#calendar-container tr th {
+    padding-top: 7px;
+    font-weight: 700;
+}
+
+#calendar-container tr td {
+    padding: 2px 0 0 0;
+    border: none;
+    border-radius: 0;
+}
+
+#calendar-container tr td:first-child:nth-last-child(8) {
+    border-right: 1px solid var(--text-faint);
+}
