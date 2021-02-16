@@ -279,6 +279,7 @@ a {
     --code-color: #d73a49;
     --blockquote-background: #fafafa;
     --item-active-backgroud: #0063e1;
+    --calendar-active-text: #ffffff;
 }
 
 .theme-dark {
@@ -290,6 +291,7 @@ a {
     --code-color: #f0976b;
     --blockquote-background: #2a2a2a;
     --item-active-backgroud: #0058d0;
+    --calendar-active-text: #333333;
 }
 
 .is-flashing {
@@ -359,16 +361,16 @@ div {
 }
 
 #calendar-container .active .dot {
-    stroke: #ffffff;
-    fill: #ffffff;
+    stroke: var(--calendar-active-text);
+    fill: var(--calendar-active-text);
 }
 
 #calendar-container .active .task {
-    stroke: #ffffff;
+    stroke: var(--calendar-active-text);
 }
 
 #calendar-container .active {
-    color: #ffffff;
+    color: var(--calendar-active-text);
     background-color: var(--text-normal);
     transition: none;
 }
